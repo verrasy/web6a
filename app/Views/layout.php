@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard 2</title>
+  <title><?=$title;?></title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -176,7 +176,7 @@
           <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Verra Sri Yulia Rahmawati</a>
+          <a href="#" class="d-block"><?=$myname;?></a>
         </div>
       </div>
 
@@ -198,7 +198,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="/" class="nav-link">
+            <a href="/" class="nav-link <?=($page == 'dashboard') ? 'active':'';?>">
             <i class="fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -206,26 +206,26 @@
               </p>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item <?=($page=='employees'||'employees_data') ? 'menu-open':'';?>">
             <a href="#" class="nav-link">
             <i class="fas fa-users"></i>
               <p>
-                Users
+                Employees
                 <i class="fas fa-angle-left right"></i>
                 <span class="badge badge-info right">6</span>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
+                <a href="/employees" class="nav-link <?=($page == 'employees') ? 'active':'';?>">
                 <i class="fas fa-history"></i>
-                  <p>Job History</p>
+                  <p>Employees Data</p>
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link <?=($page == 'department') ? 'active':'';?>">
             <i class="fas fa-building"></i>
               <p>
                 Department
@@ -234,7 +234,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link <?=($page == 'job') ? 'active':'';?>">
             <i class="fas fa-suitcase"></i>
               <p>
                 Job
@@ -243,7 +243,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link <?=($page == 'location') ? 'active':'';?>">
             <i class="fas fa-map-marker-alt"></i>
               <p>
                 Location
@@ -252,7 +252,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link <?=($page == 'countries') ? 'active':'';?>">
             <i class="fas fa-globe-americas"></i>
               <p>
                 Countries
@@ -261,7 +261,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
+                <a href="pages/tables/simple.html" class="nav-link <?=($page == 'region') ? 'active':'';?>">
                 <i class="fas fa-map"></i>
                   <p>Region</p>
                 </a>
